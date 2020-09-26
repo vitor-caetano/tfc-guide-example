@@ -1,3 +1,13 @@
+terraform {
+  backend "remote" {
+    organization = "vcaetano"
+
+    workspaces {
+      name = "dynamo1"
+    }
+  }
+}
+
 provider "aws" {
   version = "2.33.0"
 
